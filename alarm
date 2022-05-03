@@ -1,0 +1,12 @@
+#!/bin/bash
+CURRENT=$(date +%s)
+INPUT=$(date -d $1 +%s)
+INPUT_MSG=$2
+if [ -z $2 ]
+    then INPUT_MSG="Alarm!"
+fi
+RESULT=$(($INPUT - $CURRENT))
+RESULT_MIN=$(($RESULT / 60))
+RESULT_SEC=$(($RESULT % 60))
+echo "Alarm will ring after $RESULT_MIN minuite(s) and $RESULT_SEC second(s)."
+sleep $RESULT && ./notify $INPUT_MSG &

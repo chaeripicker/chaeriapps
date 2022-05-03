@@ -1,0 +1,6 @@
+#!/bin/bash
+MSG=$2
+if [ -z $2 ]
+    then MSG=Timer!
+fi
+sleep $1 && ./notify $MSG &

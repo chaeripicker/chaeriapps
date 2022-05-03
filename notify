@@ -1,0 +1,10 @@
+
+#!/bin/bash
+VAL=$1
+if [ -z $1 ]
+    then VAL=BEL!
+fi
+echo $VAL
+tput bel
+sleep 1
+tput bel
