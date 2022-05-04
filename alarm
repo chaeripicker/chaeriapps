@@ -9,4 +9,4 @@ RESULT=$(($INPUT - $CURRENT))
 RESULT_MIN=$(($RESULT / 60))
 RESULT_SEC=$(($RESULT % 60))
 echo "Alarm will ring after $RESULT_MIN minuite(s) and $RESULT_SEC second(s)."
-sleep $RESULT && ~/chaeriapps/notify $INPUT_MSG &
+sleep $RESULT && ~/chaeriapps/notify $INPUT_MSG $3 &
