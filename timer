@@ -1,6 +1,5 @@
 #!/bin/bash
 MSG=$2
-if [ -z $2 ]
-    then MSG=Timer!
-fi
+[[ -z $2 ]] && MSG=Timer!
+
 sleep $1 && ~/chaeriapps/notify $MSG $3 &
