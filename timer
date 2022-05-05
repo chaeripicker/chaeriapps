@@ -2,4 +2,6 @@
 MSG=$2
 [[ -z $2 ]] && MSG=Timer!
 
+echo "Timer set for $1 seconds."
+
 sleep $1 && ~/chaeriapps/notify $MSG $3 &
