@@ -1,0 +1,2 @@
+#!/bin/bash
+ps -eo pid,cmd | grep Debug/net6.0/TheDarkDungeons | head -1 | cut -d ' ' -f1-4
